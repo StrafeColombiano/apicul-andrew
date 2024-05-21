@@ -12,14 +12,17 @@ export class User {
   lastName: string;
 
   @Column()
-  adress: string;
+  address: string;
 
-  @Column()
-  phonenumber: String;
+  @Column({
+    unique:true 
+  })
+    email:String;
 
-  @Column()
-  email: string;
-
+    @Column()
+    phonenumber: String;
+  
+  
   @Column({ default: true })
   isActive: boolean;
 }
